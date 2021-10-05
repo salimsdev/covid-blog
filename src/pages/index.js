@@ -3,13 +3,12 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import { StaticImage } from 'gatsby-plugin-image';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import { CardActionArea } from 'gatsby-theme-material-ui';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import { Button } from 'gatsby-theme-material-ui';
 import Layout from '../components/Layout';
+import CategoriesCards from '../components/CategoriesCards';
+import FeaturedPosts from '../components/FeaturedPosts';
+import LastPosts from '../components/LastPosts';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -47,39 +46,18 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     color: '#fff',
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    padding: '0 1rem'
+    backgroundColor: 'rgba(0,0,0,0.35)',
+    padding: '0 1rem',
+    [theme.breakpoints.down('sm')]: {
+        padding: '0 0.2rem',
+    }
   },
-  containerCards: {
-    margin: '3rem auto',
+  containerLower: {
     padding: 0,
+    margin: '3rem auto',
     [theme.breakpoints.down('xs')]: {
-      margin: '1rem auto',
-      padding: '0 0.2rem'
-    },
-    [theme.breakpoints.down('md')]: {
-      margin: '1.5rem auto',
-      padding: '0 0.2rem'
-    }
-  },
-  card: {
-    [theme.breakpoints.up('md')]: {
-      height: 420
-    }
-  },
-  horizontalCard: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-      '& h5': {
-        marginBottom: '1rem'
-      }
-    }    
-  },
-  cardContent: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex', 
-      flexDirection: 'column', 
-      justifyContent: 'space-between'
+        paddingLeft: '0.2rem',
+        margin: '1rem auto'
     }
   }
 }));
@@ -95,92 +73,26 @@ const Home = () => {
                         <StaticImage src='../assets/images/header.jpg' alt='landscape' className={classes.img} placeholder='blurred' />
                         <div className={classes.text}>
                             <Typography variant='h1' align='center'>Santé et Bien-être</Typography>
-                            <Typography variant='h4' align='center'>Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance.</Typography>
+                            <Typography variant='h4' align='center' gutterBottom>Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance.</Typography>
+                            <Typography variant='h4' align='center'>Vous n'êtes pas seul.</Typography>
                         </div>
                     </div>
                     <div className={classes.right}>
                         <StaticImage src='../assets/images/yoga-portrait.jpg' alt='slider' className={classes.img} placeholder='blurred' />
                     </div>
                 </Container>
-            </header>
+            </header>            
+            <FeaturedPosts />
             <section>
-                <Container maxWidth='lg' className={classes.containerCards}>
+                <Container maxWidth='lg' className={classes.containerLower}>
                     <Grid container spacing={3}>
-                        <Grid item md={4} sm={6}>
-                            <Card className={classes.card}>
-                                <CardActionArea>
-                                    <StaticImage src='../assets/images/bien-etre small.jpg' alt='bien-être' placeholder='blurred' />
-                                    <CardContent>
-                                        <Typography variant='h5' color='textPrimary'>Bien-être</Typography>
-                                        <Typography variant='body2' color='textPrimary'>Des idées et des solutions pour toujours plus de bien-être au quotidien</Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                    <Button size='small' color='primary'>Voir plus</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item md={4} sm={6}>
-                            <Card className={classes.card}>
-                                <CardActionArea>
-                                    <StaticImage src='../assets/images/fitness small.jpg' alt='bien-être' placeholder='blurred' />
-                                    <CardContent>
-                                        <Typography variant='h5' color='textPrimary'>Fitness</Typography>
-                                        <Typography variant='body2' color='textPrimary'>Pleins d'articles pour pratiquer une activité physique en ligne avec vos objectifs</Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                    <Button size='small' color='primary'>Voir plus</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item md={4} sm={6}>
-                            <Card className={classes.card}>
-                                <CardActionArea>
-                                    <StaticImage src='../assets/images/nutrition small.jpg' alt='bien-être' placeholder='blurred' />
-                                    <CardContent>
-                                        <Typography variant='h5' color='textPrimary'>Nutrition</Typography>
-                                        <Typography variant='body2' color='textPrimary'>Des conseils et des recettes pour manger sainement en se faisant plaisir</Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                    <Button size='small' color='primary'>Voir plus</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item md={8} sm={6}>
-                            <Card className={`${classes.card} ${classes.horizontalCard}`}>
-                                <CardActionArea>
-                                    <StaticImage src='../assets/images/sante small.jpg' alt='bien-être' placeholder='blurred' className={classes.img} />
-                                </CardActionArea>
-                                <div className={classes.cardContent}>
-                                    <CardContent>
-                                        <Typography variant='h5' color='textPrimary'>Santé</Typography>
-                                        <Typography variant='body2' color='textPrimary'>Savoir soigner les petits maux du quotidien et prévenir les maladies graves naturellement</Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size='small' color='primary'>Voir plus</Button>
-                                    </CardActions>
-                                </div>
-                            </Card>
-                        </Grid>
-                        <Grid item md={4} sm={6}>
-                            <Card className={classes.card}>
-                                <CardActionArea>
-                                    <StaticImage src='../assets/images/beaute small.jpg' alt='bien-être' placeholder='blurred' />
-                                    <CardContent>
-                                        <Typography variant='h5' color='textPrimary'>Beauté</Typography>
-                                        <Typography variant='body2' color='textPrimary'>Nos conseils beauté fondés sur des méthodes naturelles respectueuses de votre corps</Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                    <Button size='small' color='primary'>Voir plus</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
+                        <LastPosts />
+                        <Grid item sm={4}></Grid>
                     </Grid>
                 </Container>
             </section>
+            <Container maxWidth='sm'><Divider /></Container>
+            <CategoriesCards />
         </Layout>
     );
 };
