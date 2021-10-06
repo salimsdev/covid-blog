@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { StaticImage } from 'gatsby-plugin-image';
 import Container from '@material-ui/core/Container';
@@ -9,6 +10,7 @@ import Layout from '../components/Layout';
 import CategoriesCards from '../components/CategoriesCards';
 import FeaturedPosts from '../components/FeaturedPosts';
 import LastPosts from '../components/LastPosts';
+import AmazonWidget from '../components/AmazonWidget';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -62,8 +64,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Home = () => {
+const Home = ({ data }) => {
     const classes = useStyles();
+    const { featuredPosts, lastPosts } = data;
     
     return (
         <Layout>
@@ -82,12 +85,14 @@ const Home = () => {
                     </div>
                 </Container>
             </header>            
-            <FeaturedPosts />
+            <FeaturedPosts posts={featuredPosts} />
             <section>
                 <Container maxWidth='lg' className={classes.containerLower}>
-                    <Grid container spacing={3}>
-                        <LastPosts />
-                        <Grid item sm={4}></Grid>
+                    <Grid container spacing={2}>
+                        <LastPosts posts={lastPosts} />
+                        <Grid item sm={4}>
+                            <AmazonWidget />
+                        </Grid>
                     </Grid>
                 </Container>
             </section>
@@ -96,5 +101,52 @@ const Home = () => {
         </Layout>
     );
 };
+
+export const query = graphql`
+  {
+    featuredPosts: allContentfulHealthBlogPosts(
+      filter: {featured: {eq: true}}
+      sort: {fields: image___createdAt, order: DESC}
+      limit: 3
+    ) {
+      nodes {
+        category {
+          name
+        }
+        description
+        id
+        title
+        image {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+        slug
+      }
+    }
+    lastPosts: allContentfulHealthBlogPosts(
+      sort: {fields: image___createdAt, order: DESC}
+      limit: 5
+    ) {
+      nodes {
+        category {
+          name
+        }
+        description
+        id
+        title
+        createdAt
+        author {
+          name
+          photo {
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+          }
+        }
+        image {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+        slug
+      }
+    }
+  }
+`
 
 export default Home;

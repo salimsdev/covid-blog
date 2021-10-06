@@ -1,38 +1,9 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
-
-const query = graphql`
-    {
-        posts: allContentfulHealthBlogPosts(
-            limit: 5
-            sort: {fields: image___createdAt, order: DESC}
-        ) {
-            nodes {
-                category {
-                    name
-                }
-                description
-                id
-                title
-                createdAt
-                author {
-                    name
-                    photo {
-                        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-                    }
-                }
-                image {
-                    gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-                }
-            }
-        }
-    }
-`
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -81,9 +52,9 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const LastPosts = () => {
+const LastPosts = ({ posts }) => {
     const classes = useStyles();
-    const { posts: { nodes } } = useStaticQuery(query);
+    const { nodes } = posts;
 
     return (
         <Grid item sm={8}>
@@ -96,7 +67,7 @@ const LastPosts = () => {
                     <div className={classes.card} key={id}>
                         <GatsbyImage image={imagePath} alt={title} className={classes.img} />
                         <div className={classes.text}>
-                            <Typography variant='subtitle2' className={classes.category}>{category[0].name.toUpperCase()} <span>{date}</span></Typography>
+                            <Typography variant='subtitle2' className={classes.category}>{category.name.toUpperCase()} <span>{date}</span></Typography>
                             <div className={classes.avatar}>
                                 <Avatar>
                                     <GatsbyImage image={avatarImage} alt={author.name} />
