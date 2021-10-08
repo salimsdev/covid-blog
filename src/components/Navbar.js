@@ -84,17 +84,17 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar position="static" color='inherit'>
+        <AppBar position="sticky" color='inherit'>
             <Toolbar className={classes.bar}>
                 <Link to='/'>
                     <img src={logo} alt='logo' />
                 </Link>
                 <div className={classes.menu}>
-                    <Button size="small" to='#'>Santé</Button>
-                    <Button size="small" to='#'>Bien-être</Button>
-                    <Button size="small" to='#'>Fitness</Button>
-                    <Button size="small" to='#'>Nutrition</Button>
-                    <Button size="small" to='#'>Beauté</Button>
+                    <Button size="small" to='/sante'>Santé</Button>
+                    <Button size="small" to='/bien-etre'>Bien-être</Button>
+                    <Button size="small" to='/fitness'>Fitness</Button>
+                    <Button size="small" to='/nutrition'>Nutrition</Button>
+                    <Button size="small" to='/beaute'>Beauté</Button>
                 </div>
                 <div className={classes.socials}>
                     <FacebookIcon color='primary' fontSize='small' />
@@ -112,23 +112,23 @@ const Navbar = () => {
                         getContentAnchorEl={null} keepMounted id="menu-principal"
                         open={Boolean(anchorEl)} onClose={handleClose}
                     >
-                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='#'>
+                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='/sante'>
                             <IconButton edge='start'><FavoriteIcon color='primary' /></IconButton>
                             <Typography>Santé</Typography>
                         </MenuItem>
-                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='#'>
+                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='/bien-etre'>
                             <IconButton edge='start'><EmojiEmotionsIcon color='primary' /></IconButton>
-                            <Typography>Bien-être</Typography>                     
+                            <Typography>Bien-être</Typography>
                         </MenuItem>
-                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='#'>
+                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='/fitness'>
                             <IconButton edge='start'><DirectionsRunIcon color='primary' /></IconButton>
                             <Typography>Fitness</Typography>
                         </MenuItem>
-                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='#'>
+                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='/nutrition'>
                             <IconButton edge='start'><FastfoodIcon color='primary' /></IconButton>
                             <Typography>Nutrition</Typography>
                         </MenuItem>
-                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='#'>
+                        <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='/beaute'>
                             <IconButton edge='start'><FaceIcon color='primary' /></IconButton>
                             <Typography>Beauté</Typography>
                         </MenuItem>

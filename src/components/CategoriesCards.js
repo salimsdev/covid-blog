@@ -5,10 +5,9 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-import { CardActionArea } from 'gatsby-theme-material-ui';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import { Button } from 'gatsby-theme-material-ui';
+import { CardActionArea, Button } from 'gatsby-theme-material-ui';
 
 const useStyles = makeStyles(theme => ({
     containerCards: {
@@ -57,21 +56,21 @@ const CategoriesCards = () => {
                 <Grid container spacing={3}>
                     <Grid item md={4} sm={6}>
                         <Card className={classes.card}>
-                            <CardActionArea>
+                            <CardActionArea to='/bien-etre'>
                                 <StaticImage src='../assets/images/bien-etre small.jpg' alt='bien-être' placeholder='blurred' />
                                 <CardContent>
                                     <Typography variant='h5' color='textPrimary'>Bien-être</Typography>
-                                    <Typography variant='body2' color='textPrimary'>Des idées et des solutions pour toujours plus de bien-être au quotidien</Typography>
+                                    <Typography variant='body2' color='textPrimary'>Des idées et des solutions pour améliorer votre bien-être au quotidien</Typography>
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size='small' color='primary'>Voir plus</Button>
+                                <Button to='/bien-etre' size='small' color='primary'>Voir plus</Button>
                             </CardActions>
                         </Card>
                     </Grid>
                     <Grid item md={4} sm={6}>
                         <Card className={classes.card}>
-                            <CardActionArea>
+                            <CardActionArea to='/fitness'>
                                 <StaticImage src='../assets/images/fitness small.jpg' alt='bien-être' placeholder='blurred' />
                                 <CardContent>
                                     <Typography variant='h5' color='textPrimary'>Fitness</Typography>
@@ -79,13 +78,13 @@ const CategoriesCards = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size='small' color='primary'>Voir plus</Button>
+                                <Button to='/fitness' size='small' color='primary'>Voir plus</Button>
                             </CardActions>
                         </Card>
                     </Grid>
                     <Grid item md={4} sm={6}>
                         <Card className={classes.card}>
-                            <CardActionArea>
+                            <CardActionArea to='/nutrition'>
                                 <StaticImage src='../assets/images/nutrition small.jpg' alt='bien-être' placeholder='blurred' />
                                 <CardContent>
                                     <Typography variant='h5' color='textPrimary'>Nutrition</Typography>
@@ -93,13 +92,13 @@ const CategoriesCards = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size='small' color='primary'>Voir plus</Button>
+                                <Button to='/nutrition' size='small' color='primary'>Voir plus</Button>
                             </CardActions>
                         </Card>
                     </Grid>
                     <Grid item md={8} sm={6}>
                         <Card className={`${classes.card} ${classes.horizontalCard}`}>
-                            <CardActionArea>
+                            <CardActionArea to='/sante'>
                                 <StaticImage src='../assets/images/sante small.jpg' alt='bien-être' placeholder='blurred' className={classes.img} />
                             </CardActionArea>
                             <div className={classes.cardContent}>
@@ -108,14 +107,14 @@ const CategoriesCards = () => {
                                     <Typography variant='body2' color='textPrimary'>Savoir soigner les petits maux du quotidien et prévenir les maladies graves naturellement</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size='small' color='primary'>Voir plus</Button>
+                                    <Button to='/sante' size='small' color='primary'>Voir plus</Button>
                                 </CardActions>
                             </div>
                         </Card>
                     </Grid>
                     <Grid item md={4} sm={6}>
                         <Card className={classes.card}>
-                            <CardActionArea>
+                            <CardActionArea to='/beaute'>
                                 <StaticImage src='../assets/images/beaute small.jpg' alt='bien-être' placeholder='blurred' />
                                 <CardContent>
                                     <Typography variant='h5' color='textPrimary'>Beauté</Typography>
@@ -123,7 +122,7 @@ const CategoriesCards = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size='small' color='primary'>Voir plus</Button>
+                                <Button to='/beaute' size='small' color='primary'>Voir plus</Button>
                             </CardActions>
                         </Card>
                     </Grid>

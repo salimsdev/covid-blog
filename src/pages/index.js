@@ -106,7 +106,7 @@ export const query = graphql`
   {
     featuredPosts: allContentfulHealthBlogPosts(
       filter: {featured: {eq: true}}
-      sort: {fields: image___createdAt, order: DESC}
+      sort: {fields: date, order: DESC}
       limit: 3
     ) {
       nodes {
@@ -123,7 +123,7 @@ export const query = graphql`
       }
     }
     lastPosts: allContentfulHealthBlogPosts(
-      sort: {fields: image___createdAt, order: DESC}
+      sort: {fields: date, order: DESC}
       limit: 5
     ) {
       nodes {
@@ -133,7 +133,7 @@ export const query = graphql`
         description
         id
         title
-        createdAt
+        date
         author {
           name
           photo {
