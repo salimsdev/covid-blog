@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -21,15 +20,33 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        '& h5': {
+            fontFamily: 'Dancing Script',
+            fontSize: '2.2rem',
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1.9rem'
+            }
+        },
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'start',
+            paddingTop: '0.5rem'
+        }
     },
     title: {
         fontSize: '4rem',
-        marginBottom: '1rem'
+        marginBottom: '1rem',
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: '0'
+        }
     },
     mainContainer: {
         marginTop: '-7rem',
-        marginBottom: '3rem'
+        marginBottom: '3rem',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '-6rem'
+        }
     }
 }));
 
@@ -42,8 +59,8 @@ const Category = ({ data }) => {
         <Layout>
             <header className={classes.header}>
                 <Container maxWidth='lg' className={classes.headerContainer}>
-                    <Typography variant='h1' color='textPrimary' className={classes.title}>{name}</Typography>
-                    <Typography variant='h5' color='textPrimary'>{description}</Typography>
+                    <Typography variant='h1' color='textPrimary' align='center' className={classes.title}>{name}</Typography>
+                    <Typography variant='h5' color='textPrimary' align='center'>{description}</Typography>
                 </Container>
             </header>
             <main>
@@ -87,7 +104,7 @@ export const query = graphql`
         }
         lastPosts: allContentfulHealthBlogPosts(
             sort: {fields: date, order: DESC}
-            limit: 5
+            limit: 10
             filter: {category: {id: {eq: $id}}}
         ) {
             nodes {

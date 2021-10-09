@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
     amazonTitle: {
         marginBottom: '1rem',
+        fontFamily: 'Dancing Script',
+        fontSize: '1.8rem',
         fontWeight: 500
     },
     amazon: {
@@ -12,7 +14,13 @@ const useStyles = makeStyles(theme => ({
         gridTemplateColumns: 'repeat(2, 1fr)',
         justifyItems: 'center',
         justifyContent: 'center',
-        gap: '1rem',
+        gap: '1rem',        
+        '& a': {
+            transition: 'opacity 250ms ease-in-out',
+            '&:hover': {
+                opacity: 0.7
+            }
+        }
     }
 }));
 

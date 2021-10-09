@@ -71,6 +71,10 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+const activeStyle = {
+    backgroundColor: '#ede7f6'
+};
+
 const Navbar = () => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = useState(null);
@@ -90,11 +94,11 @@ const Navbar = () => {
                     <img src={logo} alt='logo' />
                 </Link>
                 <div className={classes.menu}>
-                    <Button size="small" to='/sante'>Santé</Button>
-                    <Button size="small" to='/bien-etre'>Bien-être</Button>
-                    <Button size="small" to='/fitness'>Fitness</Button>
-                    <Button size="small" to='/nutrition'>Nutrition</Button>
-                    <Button size="small" to='/beaute'>Beauté</Button>
+                    <Button size="small" to='/sante' activeStyle={activeStyle}>Santé</Button>
+                    <Button size="small" to='/bien-etre' activeStyle={activeStyle}>Bien-être</Button>
+                    <Button size="small" to='/fitness' activeStyle={activeStyle}>Fitness</Button>
+                    <Button size="small" to='/nutrition' activeStyle={activeStyle}>Nutrition</Button>
+                    <Button size="small" to='/beaute' activeStyle={activeStyle}>Beauté</Button>
                 </div>
                 <div className={classes.socials}>
                     <FacebookIcon color='primary' fontSize='small' />

@@ -13,7 +13,25 @@ module.exports = {
     description: 'Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance'
   },
   plugins: [
-    `gatsby-theme-material-ui`,
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Roboto`,
+                variants: [`300`, `400`, `500`]
+              },
+              {
+                family: `Dancing Script`,
+                variants: [`400`, `500`]
+              }
+            ]
+          }
+        }
+      }
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

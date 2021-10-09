@@ -50,8 +50,9 @@ const useStyles = makeStyles(theme => ({
         flex: 0.6
     },
     title: {
-        fontSize: '1.7rem',
-        fontWeight: 400,
+        fontFamily: 'Dancing Script',
+        fontSize: '2rem',
+        fontWeight: 500,
         marginBottom: '1rem'
     },
     subtitle: {
@@ -103,11 +104,11 @@ const useStyles = makeStyles(theme => ({
     },
     h2: {
         fontWeight: 500,
-        paddingTop: '1rem'
+        paddingTop: '1.2rem'
     },
     h3: {
         fontWeight: 500,
-        fontSize: '1.2rem'
+        fontSize: '1rem'
     }
 }));
 

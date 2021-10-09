@@ -54,6 +54,11 @@ const useStyles = makeStyles(theme => ({
         padding: '0 0.2rem',
     }
   },
+  headline: {
+    fontFamily: 'Dancing Script',
+    fontSize: '3rem',
+    marginTop: '1rem'
+  },
   containerLower: {
     padding: 0,
     margin: '3rem auto',
@@ -77,7 +82,7 @@ const Home = ({ data }) => {
                         <div className={classes.text}>
                             <Typography variant='h1' align='center'>Santé et Bien-être</Typography>
                             <Typography variant='h4' align='center' gutterBottom>Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance.</Typography>
-                            <Typography variant='h4' align='center'>Vous n'êtes pas seul.</Typography>
+                            <Typography variant='h4' align='center' className={classes.headline}>Vous n'êtes pas seul</Typography>
                         </div>
                     </div>
                     <div className={classes.right}>
