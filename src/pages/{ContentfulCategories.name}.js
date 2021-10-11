@@ -8,6 +8,7 @@ import Layout from '../components/Layout';
 import FeaturedPosts from '../components/FeaturedPosts';
 import LastPosts from '../components/LastPosts';
 import AmazonWidget from '../components/AmazonWidget';
+import Seo from '../components/Seo';
 
 const useStyles = makeStyles(theme => ({
     header: {
@@ -57,6 +58,7 @@ const Category = ({ data }) => {
 
     return (
         <Layout>
+            <Seo title={name} description={description} isBlogPost={true} />
             <header className={classes.header}>
                 <Container maxWidth='lg' className={classes.headerContainer}>
                     <Typography variant='h1' color='textPrimary' align='center' className={classes.title}>{name}</Typography>

@@ -72,7 +72,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const activeStyle = {
-    backgroundColor: '#ede7f6'
+    borderRadius: '9px 9px 0px 0px',
+    borderBottom: '0.25rem solid #d1c4e9',
+    marginBottom: '-0.1rem',
+    paddingBottom: '0.5rem',
+    paddingTop: '0.7rem'
 };
 
 const Navbar = () => {

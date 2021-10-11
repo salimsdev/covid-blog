@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
           display: 'flex',
           '& h5': {
-            marginBottom: '1rem'
+            marginBottom: '2rem'
           }
         }    
     },

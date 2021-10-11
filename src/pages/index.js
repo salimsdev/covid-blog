@@ -11,6 +11,7 @@ import CategoriesCards from '../components/CategoriesCards';
 import FeaturedPosts from '../components/FeaturedPosts';
 import LastPosts from '../components/LastPosts';
 import AmazonWidget from '../components/AmazonWidget';
+import Seo from '../components/Seo';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -75,6 +76,7 @@ const Home = ({ data }) => {
     
     return (
         <Layout>
+          <Seo title='Accueil' isBlogPost={false} />
             <header className={classes.header}>
                 <Container maxWidth='xl' className={classes.containerHeader}>
                     <div className={classes.left}>

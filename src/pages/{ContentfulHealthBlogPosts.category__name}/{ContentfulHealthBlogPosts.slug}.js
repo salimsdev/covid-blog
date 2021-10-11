@@ -12,6 +12,7 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import Layout from '../../components/Layout';
 import AmazonWidget from '../../components/AmazonWidget';
 import FeaturedPosts from '../../components/FeaturedPosts';
+import Seo from '../../components/Seo';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -140,7 +141,7 @@ const options = {
 
 const BlogPost = ({ data }) => {
     const classes = useStyles();
-    const { title, image, content, author, category, date } = data.post;
+    const { title, description, image, content, author, category, date } = data.post;
     const imagePath = getImage(image);
     const avatarImage = getImage(author.photo);
     const formattedDate = new Date(date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -149,6 +150,7 @@ const BlogPost = ({ data }) => {
 
     return (
         <Layout>
+            <Seo title={title} description={description} isBlogPost={true} />
             <Container maxWidth='lg' className={classes.container}>
                 <header className={classes.header}>
                     <section className={classes.textHeader}>
@@ -187,6 +189,7 @@ export const query = graphql`
     query getPost($id: String) {
         post: contentfulHealthBlogPosts(id: {eq: $id}) {
             title
+            description
             image {
                 gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
             }
