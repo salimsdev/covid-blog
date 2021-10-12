@@ -6,6 +6,8 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import { Link } from 'gatsby-theme-material-ui';
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -43,8 +45,9 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 500,
         color: '#673ab7',
         marginBottom: '1rem',
+        transition: 'color 200ms ease-in-out',
         '&:hover': {
-            color: theme.palette.primary.light
+            color: '#9575cd'
         }
     },
     img: {
@@ -59,6 +62,7 @@ const useStyles = makeStyles(theme => ({
     subtitle: {
         display: 'flex',
         alignItems: 'center',
+        marginBottom: '1rem',
         '& p': {
             marginLeft: '0.75rem',
             fontSize: '0.95rem',
@@ -74,6 +78,24 @@ const useStyles = makeStyles(theme => ({
     avatar: {
         width: theme.spacing(7),
         height: theme.spacing(7)
+    },
+    social: {
+        '& svg': {
+            margin: '0 0.3rem',
+            transition: 'color 200ms ease-in-out',
+            '&:first-child': {
+                color: 'rgba(66,103,178,1)',
+                '&:hover': {
+                    color: 'rgba(66,103,178,0.7)'
+                }
+            },
+            '&:last-child': {
+                color: 'rgba(29,161,242,1)',
+                '&:hover': {
+                    color: 'rgba(29,161,242,0.7)'
+                }
+            }
+        }
     },
     main: {
         marginBottom: '2rem',
@@ -165,6 +187,10 @@ const BlogPost = ({ data }) => {
                             </div>
                             <span>&#x25cf;</span>
                             <Typography>{formattedDate}</Typography>
+                        </div>
+                        <div className={classes.social}>
+                            <FacebookIcon color='primary' />
+                            <TwitterIcon color='primary' />
                         </div>
                     </section>
                     <GatsbyImage image={imagePath} alt={title} className={classes.img} />

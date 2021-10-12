@@ -37,6 +37,7 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 500,
         color: theme.palette.primary.main,
         marginBottom: '0.5rem',
+        transition: 'color 200ms ease-in-out',
         '&:hover': {
             color: theme.palette.primary.light
         }

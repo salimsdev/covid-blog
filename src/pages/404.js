@@ -11,7 +11,11 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '2rem auto'
+        margin: '2rem auto',
+        [theme.breakpoints.down('sm')]: {
+            margin: '3rem auto',
+            padding: 0
+        }
     },
     text: {
         margin: '2rem auto 1rem',

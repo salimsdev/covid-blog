@@ -46,6 +46,7 @@ const useStyles = makeStyles(theme => ({
     category: {
         fontWeight: 500,
         color: theme.palette.primary.main,
+        transition: 'color 200ms ease-in-out',
         '&:hover': {
             color: theme.palette.primary.light
         }

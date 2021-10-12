@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
         '& svg': {
             cursor: 'pointer',
             marginRight: '1rem',
+            transition: 'color 200ms ease-in-out',
             '&:hover': {
                 color: theme.palette.primary.light
             }

@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
             color: '#fff',
             textDecoration: 'none !important',
             marginRight: '1rem',
+            transition: 'color 200ms ease-in-out',
             '&:hover': {
                 color: theme.palette.primary.main
             }
@@ -59,8 +60,8 @@ const Footer = () => {
             <div className={classes.links}>
                 <Link to='#'><Typography variant='h6'>A PROPOS</Typography></Link>
                 <Link to='#'><Typography variant='h6'>CONTACT</Typography></Link>
-                <Link to='#'><Typography variant='h6'>CONFIDENTIALITE</Typography></Link>
-                <Link to='#'><Typography variant='h6'>POLITIQUE</Typography></Link>
+                <Link to='/confidentialite'><Typography variant='h6'>CONFIDENTIALITE</Typography></Link>
+                <Link to='/politique'><Typography variant='h6'>POLITIQUE</Typography></Link>
             </div>
             <Typography className={classes.copyright}><CopyrightIcon className={classes.copyrightIcon} color='primary' fontSize='small' />Se Soigner - 2021</Typography>
         </footer>
