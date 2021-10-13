@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Layout from '../components/Layout';
-import Categories from '../components/Categories';
+import CategoriesCards from '../components/CategoriesCards';
 import FeaturedPosts from '../components/FeaturedPosts';
 import LastPosts from '../components/LastPosts';
 import AmazonWidget from '../components/AmazonWidget';
@@ -95,7 +95,7 @@ const Home = ({ data }) => {
               </Container>
           </header>            
           <FeaturedPosts posts={featuredPosts} />
-          <Categories/>
+          <CategoriesCards />
           <Container maxWidth='sm'><Divider /></Container>
           <section>
               <Container maxWidth='lg' className={classes.containerLower}>
