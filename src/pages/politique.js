@@ -43,7 +43,7 @@ const Politique = () => {
 
     return (
         <Layout>
-            <Container maxWith='lg' className={classes.container}>
+            <Container maxWidth='lg' className={classes.container}>
                 <Paper className={classes.paper}>
                     <Typography variant='h4' className={classes.title}>Conditions générales d'utilisation</Typography>
                     <Typography variant='subtitle2'><em>En vigueur au 01/10/2021</em></Typography>

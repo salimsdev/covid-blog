@@ -58,8 +58,8 @@ const Footer = () => {
                 <IconButton><TwitterIcon color='primary' fontSize='large' /></IconButton>
             </div>
             <div className={classes.links}>
-                <Link to='#'><Typography variant='h6'>A PROPOS</Typography></Link>
-                <Link to='#'><Typography variant='h6'>CONTACT</Typography></Link>
+                <Link to='/about'><Typography variant='h6'>A PROPOS</Typography></Link>
+                <Link to='/contact'><Typography variant='h6'>CONTACT</Typography></Link>
                 <Link to='/confidentialite'><Typography variant='h6'>CONFIDENTIALITE</Typography></Link>
                 <Link to='/politique'><Typography variant='h6'>POLITIQUE</Typography></Link>
             </div>

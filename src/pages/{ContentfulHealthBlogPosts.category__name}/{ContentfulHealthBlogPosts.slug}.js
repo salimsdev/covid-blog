@@ -15,6 +15,7 @@ import Layout from '../../components/Layout';
 import AmazonWidget from '../../components/AmazonWidget';
 import FeaturedPosts from '../../components/FeaturedPosts';
 import Seo from '../../components/Seo';
+import { Tooltip } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -80,7 +81,7 @@ const useStyles = makeStyles(theme => ({
         height: theme.spacing(7)
     },
     social: {
-        '& svg': {
+        '& a': {
             margin: '0 0.3rem',
             transition: 'color 200ms ease-in-out',
             '&:first-child': {
@@ -98,17 +99,37 @@ const useStyles = makeStyles(theme => ({
         }
     },
     main: {
-        marginBottom: '2rem',
+        marginBottom: '1rem',
         padding: '1rem 0',
         [theme.breakpoints.down('sm')]: {
             padding: 0
         }
     },
     article: {
-        padding: '2rem 1rem',
+        padding: '1rem',
         paddingRight: '5rem',
         [theme.breakpoints.down('sm')]: {
-            padding: '2rem 1rem'
+            padding: '1rem'
+        }
+    },
+    share: {
+        display: 'flex',
+        justifyContent: 'center',
+        '& a': {
+            margin: '0 0.3rem',
+            transition: 'color 200ms ease-in-out',
+            '&:first-child': {
+                color: 'rgba(66,103,178,1)',
+                '&:hover': {
+                    color: 'rgba(66,103,178,0.7)'
+                }
+            },
+            '&:last-child': {
+                color: 'rgba(29,161,242,1)',
+                '&:hover': {
+                    color: 'rgba(29,161,242,0.7)'
+                }
+            }
         }
     },
     p: {
@@ -189,8 +210,8 @@ const BlogPost = ({ data }) => {
                             <Typography>{formattedDate}</Typography>
                         </div>
                         <div className={classes.social}>
-                            <FacebookIcon color='primary' />
-                            <TwitterIcon color='primary' />
+                            <Tooltip title='Partager sur Facebook' arrow><Link to='#'><FacebookIcon /></Link></Tooltip>
+                            <Tooltip title='Partager sur Twitter' arrow><Link to="#"><TwitterIcon /></Link></Tooltip>
                         </div>
                     </section>
                     <GatsbyImage image={imagePath} alt={title} className={classes.img} />
@@ -199,6 +220,10 @@ const BlogPost = ({ data }) => {
                     <Grid container>
                         <Grid item md={8} className={classes.article}>
                             {renderRichText(content, options)}
+                            <div className={classes.share}>
+                            <Tooltip title='Partager sur Facebook' arrow><Link to='#'><FacebookIcon fontSize='large' /></Link></Tooltip>
+                            <Tooltip title='Partager sur Twitter' arrow><Link to="#"><TwitterIcon fontSize='large' /></Link></Tooltip>
+                            </div>
                         </Grid>
                         <Grid item md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <AmazonWidget />

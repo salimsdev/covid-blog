@@ -7,11 +7,12 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Layout from '../components/Layout';
-import CategoriesCards from '../components/CategoriesCards';
+import Categories from '../components/Categories';
 import FeaturedPosts from '../components/FeaturedPosts';
 import LastPosts from '../components/LastPosts';
 import AmazonWidget from '../components/AmazonWidget';
 import Seo from '../components/Seo';
+import CookiesBar from '../components/CookiesBar';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -77,34 +78,36 @@ const Home = ({ data }) => {
     return (
         <Layout>
           <Seo title='Accueil' isBlogPost={false} />
-            <header className={classes.header}>
-                <Container maxWidth='xl' className={classes.containerHeader}>
-                    <div className={classes.left}>
-                        <StaticImage src='../assets/images/header.jpg' alt='landscape' className={classes.img} placeholder='blurred' />
-                        <div className={classes.text}>
-                            <Typography variant='h1' align='center'>Santé et Bien-être</Typography>
-                            <Typography variant='h4' align='center' gutterBottom>Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance.</Typography>
-                            <Typography variant='h4' align='center' className={classes.headline}>Vous n'êtes pas seul</Typography>
-                        </div>
-                    </div>
-                    <div className={classes.right}>
-                        <StaticImage src='../assets/images/yoga-portrait.jpg' alt='slider' className={classes.img} placeholder='blurred' />
-                    </div>
-                </Container>
-            </header>            
-            <FeaturedPosts posts={featuredPosts} />
-            <section>
-                <Container maxWidth='lg' className={classes.containerLower}>
-                    <Grid container spacing={2}>
-                        <LastPosts posts={lastPosts} />
-                        <Grid item sm={4}>
-                            <AmazonWidget />
-                        </Grid>
-                    </Grid>
-                </Container>
-            </section>
-            <Container maxWidth='sm'><Divider /></Container>
-            <CategoriesCards />
+          <CookiesBar />
+          <header className={classes.header}>
+              <Container maxWidth='xl' className={classes.containerHeader}>
+                  <div className={classes.left}>
+                      <StaticImage src='../assets/images/header.jpg' alt='landscape' className={classes.img} placeholder='blurred' />
+                      <div className={classes.text}>
+                          <Typography variant='h1' align='center'>Santé et Bien-être</Typography>
+                          <Typography variant='h4' align='center' gutterBottom>Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance.</Typography>
+                          <Typography variant='h4' align='center' className={classes.headline}>Vous n'êtes pas seul</Typography>
+                      </div>
+                  </div>
+                  <div className={classes.right}>
+                      <StaticImage src='../assets/images/yoga-portrait.jpg' alt='slider' className={classes.img} placeholder='blurred' />
+                  </div>
+              </Container>
+          </header>            
+          <FeaturedPosts posts={featuredPosts} />
+          <Categories/>
+          <Container maxWidth='sm'><Divider /></Container>
+          <section>
+              <Container maxWidth='lg' className={classes.containerLower}>
+                  <Grid container spacing={2}>
+                      <LastPosts posts={lastPosts} />
+                      <Grid item sm={4}>
+                          <AmazonWidget />
+                      </Grid>
+                  </Grid>
+              </Container>
+          </section>
+          
         </Layout>
     );
 };

@@ -43,7 +43,7 @@ const Confidentialite = () => {
     
     return (
         <Layout>
-            <Container maxWith='lg' className={classes.container}>
+            <Container maxWidth='lg' className={classes.container}>
                 <Paper className={classes.paper}>
                     <Typography variant='h4' className={classes.title}>Politique de confidentialité</Typography>
                     <Typography variant='subtitle2'><em>En vigueur au 01/01/2021</em></Typography>
