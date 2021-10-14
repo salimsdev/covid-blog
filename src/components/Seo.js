@@ -29,16 +29,17 @@ const Seo = ({ title, description, image, isBlogPost, url }) => {
             meta={[
                 { name: 'description', content: metaDescription }, 
                 { name: 'image', content: metaImage },
-                { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:creator', content: twitter },
-                { name: 'twitter:title', content: title },
-                { name: 'twitter:description', content: metaDescription },
-                { name: 'twitter:image', content: metaImage },
                 { property: 'og:title', content: title },
                 { property: 'og:description', content: metaDescription },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:image', content: metaImage },
-                { property: 'og:url', content: url || siteUrl }
+                { property: 'og:url', content: url || siteUrl },
+                { property: 'fb:app_id', content: '462894907779342' },
+                { name: 'twitter:card', content: 'summary_large_image' },
+                { name: 'twitter:creator', content: twitter },
+                { name: 'twitter:title', content: title },
+                { name: 'twitter:description', content: metaDescription },
+                { name: 'twitter:image', content: `https${metaImage}` }
             ]}>
         </Helmet>
     );
