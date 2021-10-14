@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -8,6 +8,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Link } from 'gatsby-theme-material-ui';
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -90,10 +91,16 @@ const useStyles = makeStyles(theme => ({
                     color: 'rgba(66,103,178,0.7)'
                 }
             },
-            '&:last-child': {
+            '&:nth-child(even)': {
                 color: 'rgba(29,161,242,1)',
                 '&:hover': {
                     color: 'rgba(29,161,242,0.7)'
+                }
+            },
+            '&:last-child': {
+                color: 'rgba(230,0,35,1)',
+                '&:hover': {
+                    color: 'rgba(230,0,35,0.7)'
                 }
             }
         }
@@ -124,10 +131,16 @@ const useStyles = makeStyles(theme => ({
                     color: 'rgba(66,103,178,0.7)'
                 }
             },
-            '&:last-child': {
+            '&:nth-child(even)': {
                 color: 'rgba(29,161,242,1)',
                 '&:hover': {
                     color: 'rgba(29,161,242,0.7)'
+                }
+            },
+            '&:last-child': {
+                color: 'rgba(230,0,35,1)',
+                '&:hover': {
+                    color: 'rgba(230,0,35,0.7)'
                 }
             }
         }
@@ -184,16 +197,21 @@ const options = {
 
 const BlogPost = ({ data }) => {
     const classes = useStyles();
-    const { title, description, image, content, author, category, date } = data.post;
+    const { title, description, image, content, author, category, date, slug } = data.post;
     const imagePath = getImage(image);
+    const imageSrc = getSrc(image);
     const avatarImage = getImage(author.photo);
     const formattedDate = new Date(date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
     const sluggedCategory = category.name.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
     const featuredPosts = data.featuredPosts;
 
+    const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=https://se-soigner.netlify.app/${sluggedCategory}/${slug}`;
+    const twitterShare = `https://twitter.com/intent/tweet?url=https://se-soigner.netlify.app/${sluggedCategory}/${slug}&via=salim_dev&text=`;
+    const pinterestShare = `https://pinterest.com/pin/create/button/?url=https://se-soigner.netlify.app/${sluggedCategory}/${slug}/&media=${imageSrc}&description=${description}`;
+
     return (
         <Layout>
-            <Seo title={title} description={description} isBlogPost={true} />
+            <Seo title={title} description={description} isBlogPost={true} image={imageSrc} />
             <Container maxWidth='lg' className={classes.container}>
                 <header className={classes.header}>
                     <section className={classes.textHeader}>
@@ -210,8 +228,9 @@ const BlogPost = ({ data }) => {
                             <Typography>{formattedDate}</Typography>
                         </div>
                         <div className={classes.social}>
-                            <Tooltip title='Partager sur Facebook' arrow><Link to='#'><FacebookIcon /></Link></Tooltip>
-                            <Tooltip title='Partager sur Twitter' arrow><Link to="#"><TwitterIcon /></Link></Tooltip>
+                            <Tooltip title='Partager sur Facebook' arrow><a href={facebookShare} target='_blank' rel='noopener noreferrer' aria-label='facebook share'><FacebookIcon /></a></Tooltip>
+                            <Tooltip title='Partager sur Twitter' arrow><a href={twitterShare} target='_blank' rel='noopener noreferrer' aria-label='twitter share'><TwitterIcon /></a></Tooltip>
+                            <Tooltip title='Partager sur Pinterest' arrow><a href={pinterestShare} target='_blank' rel='noopener noreferrer' aria-label='pinterest share'><PinterestIcon /></a></Tooltip>
                         </div>
                     </section>
                     <GatsbyImage image={imagePath} alt={title} className={classes.img} />
@@ -221,8 +240,9 @@ const BlogPost = ({ data }) => {
                         <Grid item md={8} className={classes.article}>
                             {renderRichText(content, options)}
                             <div className={classes.share}>
-                            <Tooltip title='Partager sur Facebook' arrow><Link to='#'><FacebookIcon fontSize='large' /></Link></Tooltip>
-                            <Tooltip title='Partager sur Twitter' arrow><Link to="#"><TwitterIcon fontSize='large' /></Link></Tooltip>
+                            <Tooltip title='Partager sur Facebook' arrow><a href={facebookShare} target='_blank' rel='noopener noreferrer' aria-label='facebook share'><FacebookIcon fontSize='large' /></a></Tooltip>
+                            <Tooltip title='Partager sur Twitter' arrow><a href={twitterShare} target='_blank' rel='noopener noreferrer' aria-label='twitter share'><TwitterIcon fontSize='large' /></a></Tooltip>
+                            <Tooltip title='Partager sur Pinterest' arrow><a href={pinterestShare} target='_blank' rel='noopener noreferrer' aria-label='pinterest share'><PinterestIcon fontSize='large' /></a></Tooltip>
                             </div>
                         </Grid>
                         <Grid item md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -265,6 +285,7 @@ export const query = graphql`
                 name
             }
             date
+            slug
         }
         featuredPosts: allContentfulHealthBlogPosts(
             filter: {featured: {eq: true}}
