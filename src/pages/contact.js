@@ -51,7 +51,7 @@ const Contact = () => {
                     <Grid item sm={7}>
                         <form name='contact' method='POST' data-netlify='true' data-netlify-honeypot="bot-field">
                             <input type='hidden' name='form-name' value='contact' />
-                            <TextField variant='outlined' label="Prénom" type="text" name='name' fullWidth autoFocus={true} margin='normal' placeholder='Entrez votre prénom' required />
+                            <TextField variant='outlined' label="Prénom" type="text" name='name' fullWidth margin='normal' placeholder='Entrez votre prénom' required />
                             <TextField variant='outlined' label="Email" type="email" name='email' fullWidth margin='normal' placeholder='Entrez votre email' required />
                             <TextField variant='outlined' label="Message" name="message" fullWidth multiline={true} margin='normal' placeholder='Entrez votre message' required minRows={3} />
                             <Button type='submit' fullWidth variant='outlined' color='primary' className={classes.btn}>envoyer</Button>
