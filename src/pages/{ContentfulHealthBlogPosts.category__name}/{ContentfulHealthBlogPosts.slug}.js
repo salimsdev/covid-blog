@@ -211,7 +211,7 @@ const BlogPost = ({ data }) => {
 
     return (
         <Layout>
-            <Seo title={title} description={description} isBlogPost={true} image={imageSrc} />
+            <Seo title={title} description={description} isBlogPost={true} image={imageSrc} url={`https://se-soigner.netlify.app/${sluggedCategory}/${slug}`} />
             <Container maxWidth='lg' className={classes.container}>
                 <header className={classes.header}>
                     <section className={classes.textHeader}>

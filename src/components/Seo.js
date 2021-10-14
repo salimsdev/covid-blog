@@ -16,11 +16,11 @@ const query = graphql`
     }
 `;
 
-const Seo = ({ title, description, image, isBlogPost}) => {
+const Seo = ({ title, description, image, isBlogPost, url }) => {
     const { site } = useStaticQuery(query);
     const { title: siteTitle, description: siteDescription, image: siteImage, siteUrl, twitter } = site.siteMetadata;
     const metaDescription = description || siteDescription;
-    const metaImage = image || siteImage;
+    const metaImage = isBlogPost ? image : siteImage;
 
     return (
         <Helmet 
@@ -38,7 +38,7 @@ const Seo = ({ title, description, image, isBlogPost}) => {
                 { property: 'og:description', content: metaDescription },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:image', content: metaImage },
-                { property: 'og:url', content: siteUrl }
+                { property: 'og:url', content: url || siteUrl }
             ]}>
         </Helmet>
     );
