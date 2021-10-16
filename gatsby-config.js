@@ -52,6 +52,13 @@ module.exports = {
         spaceId: process.env.SPACE_ID,
         accessToken: process.env.CONTENT_DELIVERY_API
       }
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://icloud.us5.list-manage.com/subscribe/post?u=2f46cf8250078a5eb3893eae7&amp;id=e90e3ddc66',
+          timeout: 3500
+      }
     }
   ],
 }

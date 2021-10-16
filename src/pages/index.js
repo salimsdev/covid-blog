@@ -13,6 +13,7 @@ import LastPosts from '../components/LastPosts';
 import AmazonWidget from '../components/AmazonWidget';
 import Seo from '../components/Seo';
 import CookiesBar from '../components/CookiesBar';
+import Newsletter from '../components/Newsletter';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -107,7 +108,7 @@ const Home = ({ data }) => {
                   </Grid>
               </Container>
           </section>
-          
+          <Newsletter  />
         </Layout>
     );
 };

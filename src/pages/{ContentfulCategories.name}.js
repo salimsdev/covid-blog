@@ -9,6 +9,7 @@ import FeaturedPosts from '../components/FeaturedPosts';
 import LastPosts from '../components/LastPosts';
 import AmazonWidget from '../components/AmazonWidget';
 import Seo from '../components/Seo';
+import Newsletter from '../components/Newsletter';
 
 const useStyles = makeStyles(theme => ({
     header: {
@@ -48,6 +49,9 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             marginTop: '-6rem'
         }
+    },
+    gridContainer: {
+        marginBottom: '2rem'
     }
 }));
 
@@ -68,12 +72,13 @@ const Category = ({ data }) => {
             <main>
                 <Container maxWidth='lg' className={classes.mainContainer}>
                     <FeaturedPosts posts={featuredPosts} />
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} className={classes.gridContainer}>
                         <LastPosts posts={lastPosts} />
                         <Grid item sm={4}>
                             <AmazonWidget />
                         </Grid>
                     </Grid>
+                    <Newsletter />
                 </Container>
             </main>
         </Layout>

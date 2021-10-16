@@ -17,6 +17,7 @@ import AmazonWidget from '../../components/AmazonWidget';
 import FeaturedPosts from '../../components/FeaturedPosts';
 import Seo from '../../components/Seo';
 import { Tooltip } from '@material-ui/core';
+import Newsletter from '../../components/Newsletter';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -251,6 +252,7 @@ const BlogPost = ({ data }) => {
                     </Grid>
                 </main>
                 <FeaturedPosts posts={featuredPosts} />
+                <Newsletter />
             </Container>
         </Layout>
     );
