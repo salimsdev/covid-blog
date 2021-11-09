@@ -41,6 +41,8 @@ const useStyles = makeStyles(theme => ({
             alignItems: 'center'
         },
         '& svg': {
+            display: 'flex',
+            alignItems: 'center',
             cursor: 'pointer',
             marginRight: '1rem',
             transition: 'color 200ms ease-in-out',
@@ -48,6 +50,9 @@ const useStyles = makeStyles(theme => ({
                 color: theme.palette.primary.light
             }
         }
+    },
+    menuList: {
+        paddingBottom: 0
     },
     mobileMenu: {
         display: 'flex',
@@ -68,7 +73,11 @@ const useStyles = makeStyles(theme => ({
     mobileSocials: {
         display: 'flex',
         justifyContent: 'space-between',
-        padding: '1rem 2rem'
+        padding: '1.5rem 2rem',
+        '& svg': {
+            display: 'flex',
+            alignItems: 'center'
+        }
     }
 }));
 
@@ -106,9 +115,9 @@ const Navbar = () => {
                     <Button size="small" to='/beaute' activeStyle={activeStyle}>Beauté</Button>
                 </div>
                 <div className={classes.socials}>
-                    <FacebookIcon color='primary' fontSize='small' />
-                    <InstagramIcon color='primary' fontSize='small' />
-                    <TwitterIcon color='primary' fontSize='small' />
+                    <a href='https://www.facebook.com/metasante' target='_blank' rel="noreferrer" aria-label='lien facebook'><FacebookIcon color='primary' fontSize='small' /></a>
+                    <a href='https://www.instagram.com/metasante' target='_blank' rel="noreferrer" aria-label='lien instagram'><InstagramIcon color='primary' fontSize='small' /></a>
+                    <a href='https://twitter.com/MetaSante' target='_blank' rel="noreferrer" aria-label='lien twitter'><TwitterIcon color='primary' fontSize='small' /></a>
                 </div>
                 <div className={classes.mobileMenu}>
                     <IconButton color='primary' onClick={handleMenu} aria-controls="menu-principal" aria-haspopup="true">
@@ -120,6 +129,7 @@ const Navbar = () => {
                         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
                         getContentAnchorEl={null} keepMounted id="menu-principal"
                         open={Boolean(anchorEl)} onClose={handleClose}
+                        classes={{list: classes.menuList}}
                     >
                         <MenuItem className={classes.mobileMenuItem} onClick={handleClose} component={Link} to='/sante'>
                             <IconButton edge='start'><FavoriteIcon color='primary' /></IconButton>
@@ -143,9 +153,9 @@ const Navbar = () => {
                         </MenuItem>
                         <Divider />
                         <MenuItem className={classes.mobileSocials}>
-                            <FacebookIcon color='primary' />
-                            <InstagramIcon color='primary' />
-                            <TwitterIcon color='primary' />
+                            <a href='https://www.facebook.com/metasante' target='_blank' rel="noreferrer" aria-label='lien facebook'><FacebookIcon color='primary' /></a>
+                            <a href='https://www.instagram.com/metasante' target='_blank' rel="noreferrer" aria-label='lien instagram'><InstagramIcon color='primary' /></a>
+                            <a href='https://twitter.com/MetaSante' target='_blank' rel="noreferrer" aria-label='lien twitter'><TwitterIcon color='primary' /></a>
                         </MenuItem>
                     </Menu>
                 </div>

@@ -53,9 +53,9 @@ const Footer = () => {
     return (
         <footer className={classes.footer}>
             <div>
-                <IconButton><FacebookIcon color='primary' fontSize='large' /></IconButton>
-                <IconButton><InstagramIcon color='primary' fontSize='large' /></IconButton>
-                <IconButton><TwitterIcon color='primary' fontSize='large' /></IconButton>
+                <IconButton href='https://www.facebook.com/metasante' target='_blank' rel="noreferrer" aria-label='lien facebook'><FacebookIcon color='primary' fontSize='large' /></IconButton>
+                <IconButton href='https://www.instagram.com/metasante' target='_blank' rel="noreferrer" aria-label='lien instagram'><InstagramIcon color='primary' fontSize='large' /></IconButton>
+                <IconButton href='https://twitter.com/MetaSante' target='_blank' rel="noreferrer" aria-label='lien twitter'><TwitterIcon color='primary' fontSize='large' /></IconButton>
             </div>
             <div className={classes.links}>
                 <Link to='/about'><Typography variant='h6'>A PROPOS</Typography></Link>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <Link to='/confidentialite'><Typography variant='h6'>CONFIDENTIALITE</Typography></Link>
                 <Link to='/politique'><Typography variant='h6'>POLITIQUE</Typography></Link>
             </div>
-            <Typography className={classes.copyright}><CopyrightIcon className={classes.copyrightIcon} color='primary' fontSize='small' />Se Soigner - 2021</Typography>
+            <Typography className={classes.copyright}><CopyrightIcon className={classes.copyrightIcon} color='primary' fontSize='small' />MetaSante - 2021</Typography>
         </footer>
     );
 };

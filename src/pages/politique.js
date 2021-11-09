@@ -46,64 +46,47 @@ const Politique = () => {
             <Container maxWidth='lg' className={classes.container}>
                 <Paper className={classes.paper}>
                     <Typography variant='h4' className={classes.title}>Conditions générales d'utilisation</Typography>
-                    <Typography variant='subtitle2'><em>En vigueur au 01/10/2021</em></Typography>
+                    <Typography variant='subtitle2'><em>En vigueur au 01/11/2021</em></Typography>
                     <Typography gutterBottom>
                         Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des
-                        modalités de mise à disposition du site et des services par l'équipe de Se-Soigner.com et de définir les conditions
+                        modalités de mise à disposition du site et des services par l'équipe de MetaSante et de définir les conditions
                         d’accès et d’utilisation des services par « l'Utilisateur ».
-                        Les présentes CGU sont accessibles sur le site à la rubrique «CGU».
+                        Les présentes CGU sont accessibles sur le site à la rubrique «politique».
                     </Typography>
                     <Typography gutterBottom>
                         Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes
-                        CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur
-                        accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « Je reconnais avoir
-                        lu et compris les CGU et je les accepte ».
+                        CGU par l’utilisateur. 
                     </Typography>
                     <Typography>
                         En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer à
                         l'accès des services proposés par le site.
-                        https://se-soigner.netlify.app se réserve le droit de modifier unilatéralement et à tout moment le contenu des
+                        MetaSante se réserve le droit de modifier unilatéralement et à tout moment le contenu des
                         présentes CGU.
                     </Typography>
                     <Typography variant='h5' className={classes.subtitle}>Article 1 : Les mentions légales</Typography>
                     <Typography>
-                        L’édition et la direction de la publication du site https://se-soigner.netlify.app est assurée par DELPLANQUE Frédéric, 
+                        L’édition et la direction de la publication du site MetaSante est assurée par DELPLANQUE Frédéric, 
                         domicilié 137, rue Emile Vidal à Nîmes.
                     </Typography>
-                    <ul className={classes.list}><li>Adresse e-mail support@adhamo.com</li></ul>
+                    <ul className={classes.list}><li>Adresse e-mail support@metasante.fr</li></ul>
                     <Typography>
-                        L'hébergeur du site https://se-soigner.netlify.app est la société Netlify, dont le siège social est situé au: 
+                        L'hébergeur du site MetaSante est la société Netlify, dont le siège social est situé au: 
                     </Typography>
                     <ul className={classes.list}><li>2325 3rd Street Suite 215, 94107 San Francisco CA, US.</li></ul>
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 2 : Accès au site</Typography>
                     <Typography gutterBottom>
-                        Le site https://se-soigner.netlify.app permet à l'Utilisateur un accès gratuit aux services suivants :
-                        services de rencontre.
+                        Le site MetaSante permet à l'Utilisateur un accès gratuit aux services suivants :
+                        site d'information sur le bien-être et la santé.
                         Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les frais
                         supportés par l'Utilisateur pour accéder au service (matériel informatique, logiciels, connexion Internet, etc.)
                         sont à sa charge.
                     </Typography>
-                    <Typography gutterBottom>
-                        L’Utilisateur non membre n'a pas accès aux services réservés. Pour cela, il doit s’inscrire en remplissant le
-                        formulaire. En acceptant de s’inscrire aux services réservés, l’Utilisateur membre s’engage à fournir des
-                        informations sincères et exactes concernant son état civil et ses coordonnées, notamment son adresse email.
-                        L'Utilisateur certifie par ailleurs qu'il a plus de 18 ans, qu'il peut conclure un contrat juridiquement 
-                        contraignant avec Adhamo et qu'il accepte de se conformer aux présentes conditions générales et à toutes les 
-                        lois et réglementations applicables.
-                        Adhamo se réserve le droit de suspendre, résilier ou refuser l'accès à la zone membre à tout moment si 
-                        l'Utilisateur ne respecte pas ces conditions.
-                        Pour accéder aux services, l’Utilisateur doit ensuite s'identifier à l'aide de l'adresse email et du mot de
-                        passe qu'il aura choisi lors de son inscription.
-                        L'utilisateur ne peut pas créer plusieurs comptes avec une même adresse email.
-                        Toute utilisation des éléments d'identification d'un tiers par l'Utilisateur entraînera la fermeture définitive 
-                        de son compte.
-                    </Typography>
                     <Typography>
-                        Tout Utilisateur membre régulièrement inscrit pourra également solliciter sa désinscription en se rendant à la
-                        page dédiée sur son espace personnel. Celle-ci sera effective dans un délai raisonnable.
+                        Tout Utilisateur inscrit à la newsletter pourra solliciter sa désinscription simplement en envoyant un email à 
+                        support@metasante.fr. Celle-ci sera effective dans un délai raisonnable.
                         Tout événement dû à un cas de force majeure ayant pour conséquence un dysfonctionnement du site ou
                         serveur et sous réserve de toute interruption ou modification en cas de maintenance, n'engage pas la
-                        responsabilité de https://se-soigner.netlify.app. Dans ces cas, l’Utilisateur accepte ainsi de ne pas tenir rigueur à
+                        responsabilité de MetaSante. Dans ces cas, l’Utilisateur accepte ainsi de ne pas tenir rigueur à
                         l’éditeur de toute interruption ou suspension de service, même sans préavis.
                         L'Utilisateur a la possibilité de contacter le site par messagerie électronique à l’adresse email de l’éditeur
                         communiqué à l’ARTICLE 1.
@@ -114,8 +97,7 @@ const Politique = () => {
                         vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux
                         libertés.
                         En vertu de la loi Informatique et Libertés, en date du 6 janvier 1978, l'Utilisateur dispose d'un droit d'accès,
-                        de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur exerce ce droit via 
-                        son espace personnel.
+                        de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur exerce ce droit par email.
                         Pour plus de détails, voir la politique de confidentialité.
                     </Typography>
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 4 : Propriété intellectuelle</Typography>
@@ -135,20 +117,15 @@ const Politique = () => {
                     </Typography>
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 5 : Responsabilité</Typography>
                     <Typography gutterBottom>
-                        Les sources des informations diffusées sur le site https://se-soigner.netlify.app sont réputées fiables mais le site
+                        Les sources des informations diffusées sur le site MetaSante sont réputées fiables mais le site
                         ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
                         Les informations communiquées sont présentées à titre indicatif et général sans valeur contractuelle. Malgré
-                        des mises à jour régulières, le site https://se-soigner.netlify.app ne peut être tenu responsable de la modification
+                        des mises à jour régulières, le site MetaSante ne peut être tenu responsable de la modification
                         des dispositions administratives et juridiques survenant après la publication. De même, le site ne peut être
-                        tenue responsable de l’utilisation et de l’interprétation de l’information contenue dans ce site.
-                    </Typography>
-                    <Typography gutterBottom>
-                        L'Utilisateur s'assure de garder son mot de passe secret. Toute divulgation du mot de passe, quelle que
-                        soit sa forme, est interdite. Il assume les risques liés à l'utilisation de son identifiant et mot de passe.
-                        Le site décline toute responsabilité.
+                        tenu responsable de l’utilisation et de l’interprétation de l’information contenue dans ce site.
                     </Typography>
                     <Typography>
-                        Le site https://se-soigner.netlify.app ne peut être tenu pour responsable d’éventuels virus qui pourraient infecter
+                        Le site MetaSante ne peut être tenu pour responsable d’éventuels virus qui pourraient infecter
                         l’ordinateur ou tout matériel informatique de l’Internaute, suite à une utilisation, à l’accès, ou au
                         téléchargement provenant de ce site.
                         La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et
@@ -157,7 +134,7 @@ const Politique = () => {
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 6 : Liens hypertextes</Typography>
                     <Typography>
                         Des liens hypertextes peuvent être présents sur le site. L’Utilisateur est informé qu’en cliquant sur ces liens,
-                        il sortira du site https://se-soigner.netlify.app. Ce dernier n’a pas de contrôle sur les pages web sur lesquelles
+                        il sortira du site MetaSante. Ce dernier n’a pas de contrôle sur les pages web sur lesquelles
                         aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.
                     </Typography>
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 7 : Cookies</Typography>
@@ -165,11 +142,11 @@ const Politique = () => {
                         L’Utilisateur est informé que lors de ses visites sur le site, un cookie peut s’installer automatiquement sur
                         son logiciel de navigation.
                         Les cookies sont de petits fichiers stockés temporairement sur le disque dur de l’ordinateur de l’Utilisateur
-                        par votre navigateur et qui sont nécessaires à l’utilisation du site https://se-soigner.netlify.app. Les cookies ne
+                        par votre navigateur et qui sont nécessaires à l’utilisation du site MetaSante. Les cookies ne
                         contiennent pas d’information personnelle et ne peuvent pas être utilisés pour identifier quelqu’un. Un
                         cookie contient un identifiant unique, généré aléatoirement et donc anonyme. Certains cookies expirent à la
                         fin de la visite de l’Utilisateur, d’autres restent.
-                        L’information contenue dans les cookies est utilisée pour améliorer le site https://se-soigner.netlify.app.
+                        L’information contenue dans les cookies est utilisée pour améliorer le site MetaSante.
                         En naviguant sur le site, L’Utilisateur les accepte.
                     </Typography>
                     <Typography>
@@ -181,19 +158,19 @@ const Politique = () => {
                     </Typography>
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 8 : Publication par l'Utilisateur</Typography>
                     <Typography gutterBottom>
-                        Se-Soigner permet à l'Utilisateur de publier des informations sur son profil.
+                        MetaSante permet à l'Utilisateur de publier des informations sur son profil.
                         Dans ces informations et ses communications avec les autres membres, l'Utilisateur s'engage à respecter les 
                         règles de na Netiquette (règles de bonne conduite de l'internet) et les règles de droit en vigueur.
-                        Se-Soigner peut exercer une modération sur le contenu des profils et se réserve le droit de les supprimer sans 
+                        MetaSante peut exercer une modération sur le contenu des profils et se réserve le droit de les supprimer sans 
                         avoir à s'en justifier auprès de l'Utilisateur.
                     </Typography>
                     <Typography gutterBottom>
                         L'Utilisateur reste titulaire de l’intégralité de ses droits de propriété intellectuelle. Mais en publiant des
-                        informations sur Se-Soigner, il cède à la société éditrice le droit non exclusif et gratuit de représenter, reproduire, 
+                        informations sur MetaSante, il cède à la société éditrice le droit non exclusif et gratuit de représenter, reproduire, 
                         adapter, modifier, diffuser et distribuer sa publication, directement ou par un tiers autorisé, dans le monde
                         entier, sur tout support (numérique ou physique), pour la durée de la propriété intellectuelle. L'Utilisateur
                         cède notamment le droit d'utiliser sa publication sur internet et sur les réseaux de téléphonie mobile.
-                        Se-Soigner s'engage à faire figurer le nom de l'Utilisateur à proximité de chaque utilisation de sa
+                        MetaSante s'engage à faire figurer le nom de l'Utilisateur à proximité de chaque utilisation de sa
                         publication.
                     </Typography>
                     <Typography>

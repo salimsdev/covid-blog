@@ -46,9 +46,9 @@ const Confidentialite = () => {
             <Container maxWidth='lg' className={classes.container}>
                 <Paper className={classes.paper}>
                     <Typography variant='h4' className={classes.title}>Politique de confidentialité</Typography>
-                    <Typography variant='subtitle2'><em>En vigueur au 01/01/2021</em></Typography>
+                    <Typography variant='subtitle2'><em>En vigueur au 01/11/2021</em></Typography>
                     <Typography>
-                        Cette politique de confidentialité s'applique au site Adhamo.
+                        Cette politique de confidentialité s'applique au site MetaSante.
                         La présente politique a pour but d'exposer aux utilisateurs du site: 
                     </Typography>
                     <ul className={classes.list}>
@@ -67,7 +67,7 @@ const Confidentialite = () => {
                         Cette politique de confidentialité complète les mentions légales et les conditions générales d'utilisation que
                         les utilisateurs peuvent consulter à l'adresse ci-après:
                     </Typography>
-                    <ul className={classes.list}><li><a href='https://se-soigner.netlify.app/politique'>https://se-soigner.netlify.app/politique</a></li></ul>
+                    <ul className={classes.list}><li><a href='https://www.metasante.fr/politique'>https://www.metasante.fr/politique</a></li></ul>
                     <Typography variant='h5' className={classes.subtitle}>Article 1 : Principes généraux en matière de collecte et de traitement des données</Typography>
                     <Typography>
                         Conformément aux principes de l'article 5 du réglement européen 2016/679, la collecte et le traitement des données 
@@ -123,7 +123,7 @@ const Confidentialite = () => {
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 2 : Données à caractère personnel collectées et traitées dans le cadre de la navigation sur le site</Typography>
                     <Typography variant='h6' gutterBottom>A. Données collectées et traitées et mode de collecte</Typography>
                     <Typography>
-                        Les données à caractère personnel collectées sur le site Se-Soigner sont les suivantes: 
+                        Les données à caractère personnel collectées sur le site MetaSante sont les suivantes: 
                     </Typography>
                     <ul className={classes.list}>
                         <li>prénom</li>
@@ -140,7 +140,7 @@ const Confidentialite = () => {
                     <ul className={classes.list}><li>jusqu'à suppression de son compte par l'utilisateur ou en cas de non connection à ce compte pendant 2 ans.</li></ul>
                     <Typography>
                         La collecte et le traitement des données répondent aux finalités suivantes:<br />
-                        permettre aux utilisateurs de rechercher des profils et de faire des rencontres.
+                        permettre à l'utilisateur de recevoir des emails personnalisés contenant des informations en avant-première.
                         Les traitements de données effectuées sont fondés sur les bases légales suivantes:<br />
                     </Typography>
                     <ul className={classes.list}><li>consentement de l'utilisateur.</li></ul>
@@ -151,9 +151,9 @@ const Confidentialite = () => {
                     </Typography>
                     <Typography variant='h6' gutterBottom>C. Hébergement des données</Typography>
                     <Typography>
-                        Le site Se-Soigner est hébergé par Netlify dont le siège et situé à l'adresse ci-après:<br />
+                        Le site MetaSante est hébergé par Netlify dont le siège et situé à l'adresse ci-après:<br />
                         2325 3rd Street Suite 215, 94107 San Francisco CA, US.<br />
-                        Les données collectées et traitées par le site sont transférées vers le pays suivant: Allemagne.
+                        Les données collectées et traitées par le site sont transférées vers le pays suivant: Etats-Unis.
                     </Typography>
                     <Typography variant='h5' className={classes.subtitle}>ARTICLE 3 : Responsable du traitement des données</Typography>
                     <Typography variant='h6' gutterBottom>A. Le responsable du traitement des données</Typography>
@@ -162,7 +162,7 @@ const Confidentialite = () => {
                         domicilié 137, rue Emile Vidal à Nîmes. Il peut 
                         être contacté de la manière suivante:
                     </Typography>
-                    <ul className={classes.list}><li>email: support@se-soigner.com</li></ul>
+                    <ul className={classes.list}><li>email: support@metasante.fr</li></ul>
                     <Typography gutterBottom>
                         Le responsable du traitement des données est chargé de déterminer les finalités et les moyens mis au 
                         service du traitement des données à caractère personnel.
@@ -202,18 +202,18 @@ const Confidentialite = () => {
                         L'utilisateur peut prendre connaissance, mettre à jour, modifier ou demander la suppression des données le 
                         concernant, en respectant la procédure ci-après énoncée:
                     </Typography>
-                    <ul className={classes.list}><li>en envoyant un mail au support de Se-Soigner.</li></ul>
+                    <ul className={classes.list}><li>en envoyant un mail au support de MetaSante.</li></ul>
                     <Typography>
                         S'il en possède un, l'utilisateur a le droit de demander la suppression de son espace personnel en suivant 
                         la procédure suivante:
                     </Typography>
-                    <ul className={classes.list}><li>en envoyant un mail au support de Se-Soigner.</li></ul>
+                    <ul className={classes.list}><li>en envoyant un mail au support de MetaSante.</li></ul>
                     <Typography gutterBottom><em>Droit à la portabilité des données</em></Typography>
                     <Typography>
                         L'utilisateur a le droit de demander la portabilité de ses données personnelles, détenues par le site, vers 
                         un autre site, en se conformant à la procédure ci-après:
                     </Typography>
-                    <ul className={classes.list}><li>en envoyant un mail au support de Se-Soigner.</li></ul>
+                    <ul className={classes.list}><li>en envoyant un mail au support de MetaSante.</li></ul>
                     <Typography gutterBottom><em>Droit à la limitation et à l'opposition du traitement des données</em></Typography>
                     <Typography>
                         L'utilisateur a le droit de demander la limitation ou de s'opposer au traitement de ses données par le 
@@ -222,7 +222,7 @@ const Confidentialite = () => {
                         Afin de demander la limitation du traitement de ses données ou de formuler une opposition au traitement 
                         de ses données, l'utilisateur doit suivre la procédure suivante:
                     </Typography>
-                    <ul className={classes.list}><li>envoyer un mail au support de Se-Soigner.</li></ul>
+                    <ul className={classes.list}><li>envoyer un mail au support de MetaSante.</li></ul>
                     <Typography gutterBottom><em>Droit de ne pas faire l'objet d'une décision fondée exclusivement sur un procédé automatisé</em></Typography>
                     <Typography gutterBottom>
                         Conformément aux dispositions du réglement 2016/679, l'utilisateur a le droit de ne pas faire l'objet d'une 
@@ -249,16 +249,96 @@ const Confidentialite = () => {
                         Ces fichiers lui permettent de traiter des statistiques et des informations sur le trafic, de faciliter 
                         la navigation et d'améliorer le service pour le confort de l'utilisateur.                        
                     </Typography>
-                    <Typography>
+                    <Typography gutterBottom>
                         Pour l'utilisation de fichiers "cookies" impliquant la sauvegarde et l'analyse de données à caractère 
-                        personnel, le consentement de l'utilisateur est nécessairement demandé.<br />
-                        Pour plus d'informations, merci de visiter la page: <a href='https://se-soigner.netlify.app/cookies'>https://se-soigner.netlify.app/cookies</a>
+                        personnel, le consentement de l'utilisateur est nécessairement demandé.
                     </Typography>
-                    <Typography variant='h5' className={classes.subtitle}>ARTICLE 6 : Conditions de modification de la politique de confidentialité</Typography>
+                    <Typography>
+                        En navigant sur MetaSante, vous consentez à l’utilisation des cookies déposés par MetaSante.
+                        MetaSante utilise des cookies aux fins suivantes:
+                    </Typography>
+                    <ul className={classes.list}>
+                        <li>Usage de MetaSante : pour nous aider à reconnaître votre navigateur comme celui d’un visiteur précédent et pour 
+                        enregistrer les préférences que vous avez déterminées lors de votre précédente visite sur MetaSante. Par exemple, 
+                        nous pouvons enregistrer vos informations de connexion de sorte que vous n’ayez pas à vous connecter à chaque fois que vous visitez MetaSante ;</li>
+                        <li>Réseaux sociaux : pour vérifier si vous êtes connectés à des services tiers (Facebook, Twitter, Google+…) ;</li>
+                        <li>Ciblage : pour nous permettre de cibler (emailing, enrichissement de base) à postériori ou en temps réel l’internaute qui navigue sur MetaSante ;</li>
+                        <li>Mesure d’audience : pour suivre les données statistiques de fréquentation de MetaSante (soit l’utilisation faite de MetaSante par 
+                        les utilisateurs et pour améliorer les services du site) et pour nous aider à mesurer et étudier l’efficacité de notre 
+                        contenu interactif en ligne, de ses caractéristiques, publicités et autres communications.</li>
+                        Nous utilisons les cookies de Google Analytics pour recueillir des informations sur la façon dont les visiteurs utilisent MetaSante, 
+                        y compris les détails du site que le visiteur a parcouru avant d’arriver sur notre site, et le nombre total de fois qu’un visiteur 
+                        a visité notre site. Nous utilisons les informations pour optimiser MetaSante et nos services, et pour améliorer l’expérience 
+                        de nos utilisateurs. Les cookies ne vous identifient pas personnellement. Ils se contentent de collecter de façon anonyme des 
+                        informations qui sont transmises et stockées par Google sur des serveurs aux États-Unis conformément à ses pratiques de 
+                        confidentialité. Pour en savoir plus sur les pratiques de confidentialité de Google Analytics, cliquez sur:  
+                        <a href='https://support.google.com/analytics/answer/6004245'>https://support.google.com/analytics/answer/6004245</a>
+                        <li>
+                            Cookies publicitaires: les fournisseurs tiers, y compris Google, utilisent des cookies pour diffuser des annonces en fonction des visites antérieures des internautes sur MetaSante ou sur d'autres pages.
+                            Grâce aux cookies publicitaires, Google et ses partenaires adaptent les annonces diffusées auprès des visiteurs en fonction de leur navigation sur MetaSante et/ou d'autres sites Web.
+                            Les utilisateurs peuvent choisir de désactiver la publicité personnalisée dans les <a href='https://adssettings.google.com/authenticated'>Paramètres des annonces</a>.
+                        </li>
+                    </ul>
+                    <Typography variant='h6' className={classes.subtitle}>Vos Choix Concernant les Cookies et Balises Web</Typography>
+                    <Typography gutterBottom>
+                        Vous avez le choix de configurer votre navigateur pour accepter tous les cookies, rejeter tous les cookies, 
+                        vous informer quand un cookie est émis, sa durée de validité et son contenu, ainsi que vous permettre de refuser 
+                        son enregistrement dans votre terminal, et supprimer vos cookies périodiquement.
+                    </Typography>
+                    <Typography>
+                        Vous pouvez paramétrer votre navigateur Internet pour désactiver les cookies. Notez toutefois que si vous 
+                        désactivez les cookies, votre nom d’utilisateur ainsi que votre mot de passe ne seront plus sauvegardés sur 
+                        aucun site web. Pour plus d’informations relatives aux méthodes vous permettant de supprimer et de contrôler 
+                        les cookies stockés sur votre ordinateur, consultez le site suivant : http://www.allaboutcookies.org/fr/
+                    </Typography>
+                    <Typography variant='h6' className={classes.subtitle}>Comment configurer votre navigateur</Typography>
+                    <Typography>
+                        Firefox :
+                    </Typography>
+                    <ul className={classes.list}>
+                        <li>1. Ouvrez Firefox</li>
+                        <li>2. Appuyez sur la touche « Alt »</li>
+                        <li>3. Dans le menu en haut de la page cliquez sur « Outils » puis « Options »</li>
+                        <li>4. Sélectionnez l’onglet « Vie privée »</li>
+                        <li>5. Dans le menu déroulant à droite de « Règles de conservation », cliquez sur « utiliser les paramètres personnalisés pour l’historique »</li>
+                        <li>6. Un peu plus bas, décochez « Accepter les cookies »</li>
+                        <li>7. Sauvegardez vos préférences en cliquant sur « OK »</li>
+                    </ul>
+                    <Typography>
+                        Internet Explorer :
+                    </Typography>
+                    <ul className={classes.list}>
+                        <li>1. Ouvrez Internet Explorer</li>
+                        <li>2. Dans le menu « Outils », sélectionnez « Options Internet »</li>
+                        <li>3. Cliquez sur l’onglet « Confidentialité »</li>
+                        <li>4. Cliquez sur « Avancé » et décochez « Accepter »</li>
+                        <li>5. Sauvegardez vos préférences en cliquant sur « OK »</li>
+                    </ul>
+                    <Typography>
+                        Google Chrome :
+                    </Typography>
+                    <ul className={classes.list}>
+                        <li>1. Ouvrez Google Chrome</li>
+                        <li>2. Cliquez sur l’icône d’outils dans la barre de menu</li>
+                        <li>3. Sélectionnez « Options »</li>
+                        <li>4. Cliquez sur l’onglet « Options avancées »</li>
+                        <li>5. Dans le menu déroulant « Paramètres des cookies », sélectionnez « Bloquer tous les cookies »</li>
+                    </ul>
+                    <Typography>
+                        Safari :
+                    </Typography>
+                    <ul className={classes.list}>
+                        <li>1. Ouvrez Safari</li>
+                        <li>2. Dans la barre de menu en haut, cliquez sur « Safari », puis « Préférences »</li>
+                        <li>3. Sélectionnez l’icône « Sécurité »</li>
+                        <li>4. À côté de « Accepter les cookies », cochez « Jamais »</li>
+                        <li>5. Si vous souhaitez voir les cookies qui sont déjà sauvegardés sur votre ordinateur, cliquez sur « Afficher les cookies »</li>
+                    </ul>
+                    <Typography variant='h5' className={classes.subtitle}>ARTICLE 7 : Conditions de modification de la politique de confidentialité</Typography>
                     <Typography>
                         La présente politique de confidentialité peut être consultée à tout moment à l'adresse ci-après indiquée:
                     </Typography>
-                    <ul className={classes.list}><li>https://se-soigner.netlify.app/confidentialite.</li></ul>
+                    <ul className={classes.list}><li>https://www.metasante.fr/confidentialite.</li></ul>
                     <Typography>
                         L'éditeur du site se réserve le droit de la modifier afin de garantir sa conformité avec le droit en vigueur. 
                         Par conséquent, l'utilisateur est invité à venir consulter régulièrement cette politique de confidentialité 
@@ -269,7 +349,7 @@ const Confidentialite = () => {
                     <ul className={classes.list}><li>mail ou notification en visitant le site.</li></ul>
                     <Typography>
                         Il est porté à la connaissance de l'utilisateur que la dernière mise à jour de la présente politique de 
-                        confidentialité est intervenue le 12/10/2021.
+                        confidentialité est intervenue le 01/11/2021.
                     </Typography>
                 </Paper>
             </Container>

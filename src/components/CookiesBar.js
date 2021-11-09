@@ -27,7 +27,7 @@ const CookiesBar = () => {
 
     const message = 
             <Typography variant='body2'>
-                Ce site utilise des cookies pour vous offrir un service de qualité et analyser le traffic. En continuant à utiliser ce site, vous acceptez notre <Link to='/politique' className={classes.link}>politique relative aux cookies</Link>
+                Ce site utilise des cookies pour vous offrir un service de qualité et analyser le traffic. En continuant à utiliser ce site, vous acceptez notre <Link to='/confidentialite' className={classes.link}>politique relative aux cookies</Link>
             </Typography>;
 
     const handleClose = (event, reason) => {
