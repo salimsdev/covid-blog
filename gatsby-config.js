@@ -12,7 +12,7 @@ module.exports = {
     title: 'MetaSante',
     description: 'Apprenez à vous soigner Naturellement et retrouvez Bien-être, Energie et Confiance',
     image: 'https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
-    siteUrl: 'http://www.metasante.fr',
+    siteUrl: 'https://www.metasante.fr',
     twitter: '@metasante'
   },
   plugins: [
@@ -33,6 +33,19 @@ module.exports = {
             ]
           }
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-79448517-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Defers execution of google analytics script after page load
+        defer: false
       }
     },
     `gatsby-plugin-image`,
