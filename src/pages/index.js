@@ -135,7 +135,7 @@ export const query = graphql`
     }
     lastPosts: allContentfulHealthBlogPosts(
       sort: {fields: date, order: DESC}
-      limit: 5
+      limit: 8
     ) {
       nodes {
         category {
