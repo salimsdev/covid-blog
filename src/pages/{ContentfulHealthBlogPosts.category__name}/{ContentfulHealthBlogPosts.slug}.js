@@ -206,13 +206,13 @@ const BlogPost = ({ data }) => {
     const sluggedCategory = category.name.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
     const featuredPosts = data.featuredPosts;
 
-    const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=https://se-soigner.netlify.app/${sluggedCategory}/${slug}`;
-    const twitterShare = `https://twitter.com/intent/tweet?url=https://se-soigner.netlify.app/${sluggedCategory}/${slug}&via=salim_dev&text=`;
-    const pinterestShare = `https://pinterest.com/pin/create/button/?url=https://se-soigner.netlify.app/${sluggedCategory}/${slug}/&media=${imageSrc}&description=${description}`;
+    const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=https://www.metasante.fr/${sluggedCategory}/${slug}`;
+    const twitterShare = `https://twitter.com/intent/tweet?url=https://www.metasante.fr/${sluggedCategory}/${slug}&via=metasante&text=`;
+    const pinterestShare = `https://pinterest.com/pin/create/button/?url=https://www.metasante.fr/${sluggedCategory}/${slug}/&media=${imageSrc}&description=${description}`;
 
     return (
         <Layout>
-            <Seo title={title} description={description} isBlogPost={true} image={imageSrc} url={`https://se-soigner.netlify.app/${sluggedCategory}/${slug}`} />
+            <Seo title={title} description={description} isBlogPost={true} image={imageSrc} url={`https://www.metasante.fr/${sluggedCategory}/${slug}`} />
             <Container maxWidth='lg' className={classes.container}>
                 <header className={classes.header}>
                     <section className={classes.textHeader}>
