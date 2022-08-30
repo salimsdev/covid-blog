@@ -58,7 +58,7 @@ const Newsletter = () => {
     const onSubmit = async e => {
         e.preventDefault();
         setLoading(true);
-        const response = await addToMailchimp(email, { LNAME: name });
+        const response = await addToMailchimp(email, { LNAME: name, 'group[383426][1]': '1' });
         setResult(response.result);
         setLoading(false);
         console.log(response);

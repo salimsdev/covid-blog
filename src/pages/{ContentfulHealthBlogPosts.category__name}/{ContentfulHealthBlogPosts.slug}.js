@@ -241,9 +241,9 @@ const BlogPost = ({ data }) => {
                         <Grid item md={8} className={classes.article}>
                             {renderRichText(content, options)}
                             <div className={classes.share}>
-                            <Tooltip title='Partager sur Facebook' arrow><a href={facebookShare} target='_blank' rel='noopener noreferrer' aria-label='facebook share'><FacebookIcon fontSize='large' /></a></Tooltip>
-                            <Tooltip title='Partager sur Twitter' arrow><a href={twitterShare} target='_blank' rel='noopener noreferrer' aria-label='twitter share'><TwitterIcon fontSize='large' /></a></Tooltip>
-                            <Tooltip title='Partager sur Pinterest' arrow><a href={pinterestShare} target='_blank' rel='noopener noreferrer' aria-label='pinterest share'><PinterestIcon fontSize='large' /></a></Tooltip>
+                                <Tooltip title='Partager sur Facebook' arrow><a href={facebookShare} target='_blank' rel='noopener noreferrer' aria-label='facebook share'><FacebookIcon fontSize='large' /></a></Tooltip>
+                                <Tooltip title='Partager sur Twitter' arrow><a href={twitterShare} target='_blank' rel='noopener noreferrer' aria-label='twitter share'><TwitterIcon fontSize='large' /></a></Tooltip>
+                                <Tooltip title='Partager sur Pinterest' arrow><a href={pinterestShare} target='_blank' rel='noopener noreferrer' aria-label='pinterest share'><PinterestIcon fontSize='large' /></a></Tooltip>
                             </div>
                         </Grid>
                         <Grid item md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
