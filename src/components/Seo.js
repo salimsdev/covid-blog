@@ -39,7 +39,8 @@ const Seo = ({ title, description, image, isBlogPost, url }) => {
                 { name: 'twitter:creator', content: twitter },
                 { name: 'twitter:title', content: title },
                 { name: 'twitter:description', content: metaDescription },
-                { name: 'twitter:image', content: `https${metaImage}` }
+                { name: 'twitter:image', content: `https${metaImage}` },
+                { name: 'propeller', content: '12f42849f5689ef637a420a91b5b3e94' }
             ]}>
         </Helmet>
     );
