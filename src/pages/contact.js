@@ -47,6 +47,9 @@ const Contact = () => {
                         <Typography variant='body1' color='textPrimary'>
                             Vous avez des questions, des requêtes, un problème technique ou vous souhaitez simplement nous envoyer un message? N'hésitez pas à nous en faire part en utilisant le formulaire.
                         </Typography>
+                        <Typography variant='body1' color='textPrimary'>
+                            Vous pouvez aussi nous joindre directement sur <a href="mailto:name@email.com">support@metasante.fr</a>
+                        </Typography>
                     </Grid>
                     <Grid item sm={7}>
                         <form name='contact' method='POST' data-netlify='true' data-netlify-honeypot="bot-field">
